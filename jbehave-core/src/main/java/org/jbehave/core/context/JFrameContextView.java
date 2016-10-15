@@ -1,7 +1,7 @@
 package org.jbehave.core.context;
 
 import static java.text.MessageFormat.format;
-import static org.apache.commons.lang.StringEscapeUtils.escapeHtml;
+import static org.apache.commons.lang3.StringEscapeUtils.escapeHtml4;
 
 import java.awt.BorderLayout;
 import java.awt.Point;
@@ -33,7 +33,7 @@ public class JFrameContextView implements ContextView {
 
 	/**
 	 * Builder-style way to set the preferred size for the frame
-	 * 
+	 *
 	 * @param width the width
 	 * @param height height
 	 * @return The JFrameContextView
@@ -46,7 +46,7 @@ public class JFrameContextView implements ContextView {
 
 	/**
 	 * Builder-style way to set the preferred location for the frame
-	 * 
+	 *
 	 * @param x the x position on screen
 	 * @param y the y position on screen
 	 * @return The JFrameContextView
@@ -70,7 +70,7 @@ public class JFrameContextView implements ContextView {
 	}
 
 	protected String formatText(String story, String scenario, String step) {
-		return format(labelTemplate(), (story != null ? escapeHtml(story) : ""), (scenario != null ? escapeHtml(scenario) : ""), escapeHtml(step));
+		return format(labelTemplate(), (story != null ? escapeHtml4(story) : ""), (scenario != null ? escapeHtml4(scenario) : ""), escapeHtml4(step));
 	}
 
 	protected String labelTemplate() {

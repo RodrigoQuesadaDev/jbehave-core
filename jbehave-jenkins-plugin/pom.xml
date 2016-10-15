@@ -28,6 +28,12 @@
   </dependencyManagement>
   <dependencies>
     <dependency>
+      <groupId>org.jbehave</groupId>
+      <artifactId>jbehave-core</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>xunit</artifactId>
       <version>${xunit.plugin.version}</version>
@@ -68,12 +74,6 @@
       		<groupId>junit</groupId>
       	</exclusion>
       </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.jbehave</groupId>
-      <artifactId>jbehave-core</artifactId>
-      <version>${project.version}</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>xmlunit</groupId>
